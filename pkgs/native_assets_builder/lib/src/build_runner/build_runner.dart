@@ -735,7 +735,7 @@ ${compileResult.stdout}
     switch (hook) {
       case Hook.build:
         // Build hooks are run in toplogical order.
-        if (packagesWithHook.length <= 1 && runPackageName == null) {
+        if (packagesWithHook.length <= 100 && runPackageName == null) {
           final dependencyGraph = PackageGraph({
             for (final p in packagesWithHook) p.name: [],
           });
